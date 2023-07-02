@@ -2,77 +2,91 @@
 Authors: Anton Hibl, Ethan Wilcox
 
 ** 1.Introduction:
-Our project aims to develop an online art gallery platform that allows artists to create user accounts, upload their artwork, and showcase their creations through individual gallery pages. The system will utilize a SQL backend to store user information, artwork metadata, and provide a seamless experience for artists and art enthusiasts.
+Our project aims to develop an online art gallery platform that allows artists
+to create user accounts, upload their artwork, and showcase their creations
+through individual gallery pages. The system will utilize a SQL backend to store
+user information, artwork metadata, and provide a seamless experience for
+artists and art enthusiasts.
 
 ** 2. Project Objectives:
 - Create a user registration system to allow artists to create individual accounts.
 - Implement a secure login mechanism for users to access their accounts.
 - Develop an artwork submission feature that enables users to upload images.
-- Design a gallery page for each user to display their artwork in a visually appealing manner.
+- Design a gallery page for each user to display their artwork in a visually
+  appealing manner.
 - Ensure efficient data management and retrieval using a SQL backend.
 - Maintain user privacy and data security throughout the system.
 
 ** 3. Features and Functionality:
-***3.1 User Registration:
+*** 3.1 User Registration:
 - Artists can register by providing their basic details, such as name, email, and password.
 - Implement a secure registration process to prevent unauthorized access.
 
-***3.2 User Login:
+*** 3.2 User Login:
 - Users will have the ability to log in to their accounts using their registered credentials.
 - Implement authentication mechanisms to ensure secure access to user accounts.
 
-***3.3 Artwork Submission:
+*** 3.3 Artwork Submission:
 - Artists will be able to upload their artwork, including images and accompanying metadata.
-- Define the necessary fields for artwork metadata, such as title, description, medium, and creation date.
+- Define the necessary fields for artwork metadata, such as title, description,
+  medium, and creation date.
 - Implement a file upload mechanism to handle artwork images.
 
-***3.4 User Gallery Pages:
+*** 3.4 User Gallery Pages:
 - Create individual gallery pages for each user to showcase their artwork.
 - Design the gallery pages to display artwork thumbnails or previews.
 - Allow users to organize and categorize their artwork within their gallery pages(optional).
 
-***3.5 Search and Filtering:
-- Implement search functionality to allow users to search for artwork based on specific criteria, such as artist name, title, or medium.
-- Enable filtering options to refine search results based on parameters like art style, genre, or creation date.
+*** 3.5 Search and Filtering:
+- Implement search functionality to allow users to search for artwork based on
+  specific criteria, such as artist name, title, or medium. 
+- Enable filtering options to refine search results based on parameters like art
+  style, genre, or creation date. 
 
-***3.6 User Interactions:
+*** 3.6 User Interactions:
 - Allow users to like, comment on, and share artwork within the platform.
 - Implement a notification system to inform users of interactions on their artwork.
 
-**4. Technologies and Architecture:
-- Backend: SQL database (e.g., MySQL, PostgreSQL) to store user information, artwork metadata, and other relevant data.
+** 4. Technologies and Architecture:
+- Backend: SQL database (e.g., MySQL, PostgreSQL) to store user information,
+  artwork metadata, and other relevant data. 
 - Frontend: HTML, CSS, and JavaScript for user interface design and interactivity.
-- Server-side programming: A backend framework like Django or Node.js for handling user authentication, data management, and API integration.
-- Cloud storage: Utilize services like Amazon S3 or Google Cloud Storage to store and manage uploaded artwork images securely.
+- Server-side programming: A backend framework like Django or Node.js for
+  handling user authentication, data management, and API integration. 
+- Cloud storage: Utilize services like Amazon S3 or Google Cloud Storage to
+  store and manage uploaded artwork images securely. 
 
-**5. Project Timeline:
+** 5. Project Timeline:
 - Week 1: Project planning and requirements gathering.
-- Week 2: Database design and schema development.
-- Week 3: User registration and login system implementation.
-- Week 4: Artwork submission feature implementation.
-- Week 5: User gallery page development.
-- Week 6: Search and filtering functionality integration.
-- Week 7: User interactions and notifications implementation.
-- Week 8: Testing, bug fixing, and finalizing the project.
+- Week 1: Database design and schema development.
+- Week 2: User registration and login system implementation.
+- Week 3: Artwork submission feature implementation.
+- Week 4: User gallery page development.
+- Week 5: Search and filtering functionality integration.
+- Week 6: User interactions and notifications implementation.
+- Week 6: Testing, bug fixing, and finalizing the project.
 
-**6. Expected Outcomes:
+** 6. Expected Outcomes:
 - A functional art gallery website with user account registration and login capabilities.
-- Secure storage and retrieval of user information, artwork metadata, and images using a SQL backend.
+- Secure storage and retrieval of user information, artwork metadata, and images
+  using a SQL backend. 
 - Individual gallery pages for users to showcase their artwork.
-- Search and filtering options for users to discover and explore artwork within the platform.
+- Search and filtering options for users to discover and explore artwork within
+  the platform. 
 - User interaction features like liking, commenting, and sharing artwork.
 - A visually appealing and user-friendly interface for artists and art enthusiasts.
 
-**7. Conclusion:
-The proposed art gallery website with user accounts will provide a platform for artists to showcase their work and engage with art enthusiasts. By utilizing a SQL
-
- backend, the system will ensure efficient data management and privacy for users. The project aims to create a seamless and visually appealing experience, enhancing the art community's ability to share and appreciate artwork in a digital space.
+** 7. Conclusion:
+The proposed art gallery website with user accounts will provide a platform for
+artists to showcase their work and engage with art enthusiasts. By utilizing a
+SQL backend, the system will ensure efficient data management and privacy for
+users. The project aims to create a seamless and visually appealing experience,
+enhancing the art community's ability to share and appreciate artwork in a
+digital space.
 
 * Entity-Relationship (ER) Schema:
 
-
 Here is an ER schema for the proposed art gallery project:
-
 
 #+BEGIN_SRC sql
 User
@@ -107,8 +121,13 @@ interaction_type (e.g., like, comment, share)
 interaction_date
 #+END_SRC
 
+This schema includes three main entities: User, Artwork, and Gallery. The User
+entity stores information about registered users, while the Artwork entity
+represents individual pieces of artwork uploaded by users. The Gallery entity
+associates each user with their respective gallery page. Lastly, the Interaction
+entity tracks user interactions with artwork, allowing for features like liking,
+commenting, and sharing.
 
-This schema includes three main entities: User, Artwork, and Gallery. The User entity stores information about registered users, while the Artwork entity represents individual pieces of artwork uploaded by users. The Gallery entity associates each user with their respective gallery page. Lastly, the Interaction entity tracks user interactions with artwork, allowing for features like liking, commenting, and sharing.
-
-Note: This ER schema is a simplified representation and may require additional tables or fields based on specific project requirements and design decisions.
+Note: This ER schema is a simplified representation and may require additional
+tables or fields based on specific project requirements and design decisions. 
 
