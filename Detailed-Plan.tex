@@ -1,0 +1,219 @@
+% Created 2023-07-23 Sun 18:59
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Anton Hibl}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Anton Hibl},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Final Group Project Plan: Art Gallery Website}
+\label{sec:orgff780d7}
+
+\subsection{Team Members: Anton Hibl, Ethan Wilcox}
+\label{sec:org24faf47}
+
+\subsubsection{Introduction}
+\label{sec:org38be2af}
+
+This document provides an exhaustive, step-by-step plan for our Art Gallery
+Website project, elaborating on our strategies and methods to bring the project
+to life. By partitioning our project into two main phases, we aim to streamline
+our progress while ensuring a thorough, complete, and high-quality result. 
+
+\subsubsection{1. Detailed List of React Components and their Interactions}
+\label{sec:org0e30339}
+
+To establish clarity and a systematic approach, we have divided our components
+into two categories - "core" and "supportive". Our core components are integral
+for the main functionality of our application, while the supportive components
+enrich user interaction and assist in managing the data handling process. 
+
+\begin{itemize}
+\item Core Components:
+
+\begin{itemize}
+\item Home
+\item Gallery
+\item ArtworkDetail
+\item UserAccount
+\item Navbar
+\end{itemize}
+
+\item Supportive Components:
+
+\begin{itemize}
+\item ArtworkCard
+\item Search
+\item LoginForm and RegisterForm
+\end{itemize}
+\end{itemize}
+
+\subsubsection{2. Functions and Application Logic}
+\label{sec:org7b21e39}
+
+We have identified the core functions that will govern the primary operations of
+our application: 
+
+\begin{itemize}
+\item User registration and authentication: Functions like registerUser, loginUser,
+logoutUser will handle user registration and authentication. They will
+interact with the LoginForm and RegisterForm components and update the state
+of UserAccount and Navbar components.
+
+\item Artwork handling: Functions like uploadArtwork, searchArtwork will manage
+artwork-related operations. They will coordinate with the UserAccount, Home,
+Gallery, and Search components for various use-cases.
+
+\item User interactions: Functions like interactWithArtwork will handle user
+interactions like liking, commenting, and sharing the artwork. They will
+mainly interact with the ArtworkDetail component.
+\end{itemize}
+
+\subsubsection{3. API Request-Response Formats}
+\label{sec:org5667352}
+
+Our application will maintain consistent interaction with the backend using the
+following primary endpoints:
+
+\begin{itemize}
+\item User Registration (POST /api/users)
+\item User Login (POST /api/users/login)
+\item Upload Artwork (POST /api/artworks)
+\item Search Artwork (GET /api/artworks/search)
+\item User Interactions (POST /api/interactions)
+\end{itemize}
+
+\subsubsection{4. Endpoint Routes}
+\label{sec:org321e844}
+
+Each of our API endpoint routes will serve a clear purpose and handle distinct
+data operations. We have carefully selected and designed these routes to make
+the process of data handling efficient, secure, and reliable. Each route and its
+functionality, along with the expected data for each endpoint, have been
+meticulously explained in our previous plan.
+
+\subsubsection{5. Design References}
+\label{sec:orge421bc7}
+
+For the design of our Art Gallery Website, we are focusing on maintaining a
+minimalist aesthetic while ensuring intuitive user navigation and high-quality
+artwork showcase. Our design inspiration is drawn from established digital art
+platforms and current web design trends to provide our users with a fresh,
+contemporary, and enjoyable user experience. For each component and the overall
+website design, we will create wireframes and mockups to provide a clear visual
+guide during our development process.
+
+\subsubsection{6. Phase-1 and Phase-2 Deliverables}
+\label{sec:orgc10ff3b}
+
+To ensure a manageable workload and efficient development process, we have
+divided our project into two major phases. Each phase will focus on distinct
+aspects of our project, allowing us to maintain an organized approach throughout
+our development process.
+
+\begin{itemize}
+\item Phase-1 Deliverables:
+\begin{itemize}
+\item Project setup and environment preparation
+\item Design and implementation of the database schema
+\item Development of basic components and user registration/login functionalities
+\item Initial API endpoints for user registration and login
+\end{itemize}
+
+\item Phase-2 Deliverables:
+\begin{itemize}
+\item Development of advanced components and functionalities
+\item Additional API endpoints to handle artwork upload, search, and user interactions
+\item Thorough testing, debugging, and deployment
+\end{itemize}
+\end{itemize}
+
+\subsubsection{7. Task Breakdown and Member Allocation}
+\label{sec:orgb313068}
+
+Our project task breakdown is primarily divided between frontend and backend
+development tasks. The roles and tasks assigned to each team member ensure a
+fair distribution of workload and an effective division of responsibilities
+based on each member's strengths and areas of expertise.
+
+\begin{itemize}
+\item Anton:
+
+\begin{itemize}
+\item Phase-1 Tasks:
+\begin{itemize}
+\item Environment Setup
+\item Home Component Development
+\item Navbar Component Development
+\item LoginForm and RegisterForm Component Development
+\item Design Wireframes and Mockups
+\end{itemize}
+
+\item Phase-2 Tasks:
+\begin{itemize}
+\item Gallery Component Development
+\item ArtworkCard and ArtworkDetail Components Development
+\item UserAccount Component Development
+\item Testing and Debugging
+\end{itemize}
+\end{itemize}
+
+\item Ethan:
+
+\begin{itemize}
+\item Phase-1 Tasks:
+\begin{itemize}
+\item Project Initialization
+\item Database Schema Implementation
+\item User Registration and Login API Endpoints
+\item Initial Backend Testing
+\end{itemize}
+
+\item Phase-2 Tasks:
+\begin{itemize}
+\item Artwork Upload and Search API Endpoints
+\item User Interaction API Endpoints
+\item Backend Optimization
+\item Final Backend Testing
+\end{itemize}
+\end{itemize}
+
+\item Collaborative Tasks:
+
+\begin{itemize}
+\item Project Planning and Design
+\item Component Integration
+\item Project Review and Debugging
+\item Final Project Deployment
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Conclusion}
+\label{sec:orgbba319f}
+
+In conclusion, this detailed plan and task breakdown ensure a systematic
+approach to the project, efficient workload distribution, and effective
+collaboration between team members. By adhering to this plan along with other
+tools like our ER schema guidelines, we aim to deliver a high-quality, fully
+functional Art Gallery Website within the allocated timeframe.
+\end{document}
