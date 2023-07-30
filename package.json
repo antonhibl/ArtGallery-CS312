@@ -1,0 +1,20 @@
+{
+  "name": "artgallery-cs312",
+  "version": "1.0.0",
+  "description": "This project is an online art gallery platform where artists can create accounts, upload their artwork, showcase their creations through individual gallery pages, and interact with each other's artworks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonhibl/ArtGallery-CS312.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonhibl/ArtGallery-CS312/issues"
+  },
+  "homepage": "https://github.com/antonhibl/ArtGallery-CS312#readme"
+}
