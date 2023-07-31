@@ -136,6 +136,9 @@ Key takeaways from Phase-1 include:
 #+caption: Tests Example
 [[file:./media/5.png]]
 
+#+caption: Gulp Workflows Example
+[[file:./media/6.png]]
+
 ** Conclusion
 
 Phase-1 of the project has set the stage for a well-architected, secure, and
