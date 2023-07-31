@@ -1,0 +1,185 @@
+% Created 2023-07-31 Mon 10:50
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Anton Hibl}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Anton Hibl},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Phase-1 Report: A Comprehensive Technical Overview}
+\label{sec:orge0c54d9}
+
+\subsection{Introduction}
+\label{sec:org93342ac}
+
+Phase-1 of the project has laid a strong and nuanced foundation, driven by the
+vision of delivering a high-quality, secure, and efficient product. This stage
+was characterized by meticulous planning, thoughtful design, extensive testing,
+and close connection between different facets of the development team. 
+
+\subsection{Frontend Development}
+\label{sec:orgf9fd8dd}
+
+\subsubsection{Features and Functionalities}
+\label{sec:orgd9ed703}
+
+\begin{itemize}
+\item User Registration and Login System: A robust user registration system was
+developed with input validation, secure password handling using
+cryptographic hashing, and a seamless user experience.
+
+\item Art Gallery View: An intuitive and interactive art gallery view was
+designed, with capabilities for users to browse, filter, and view artworks
+in various arrangements.
+
+\item Responsive Design: A mobile-first approach ensured that the user interface
+would adapt across different devices and screen sizes.
+\end{itemize}
+
+\subsubsection{Design Components and Wireframes}
+\label{sec:org387dad6}
+
+The wireframes created during this phase provided a visual blueprint for the
+interface design. Components were mapped out to ensure cohesion across different
+sections of the application, with an emphasis on usability and aesthetics.
+
+\subsection{Backend Development}
+\label{sec:org6f146a8}
+
+\subsubsection{Features and Functionalities}
+\label{sec:org8caac8d}
+
+\begin{itemize}
+\item User Authentication and Authorization: Utilizing JWT tokens, a secure
+authentication system was implemented, ensuring data integrity and user
+privacy by protecting and hashing passwords.
+
+\item UI: Navigation and homepage components were completed and will ensure a
+complete and unified experience for visitors to the gallery.
+
+\item Database Design: A simple yet effective ER schema was designed and translated
+into JavaScript, which has established a solid foundation for data
+relations and integrity.
+\end{itemize}
+
+\subsubsection{Secure Design Considerations}
+\label{sec:org90278ff}
+
+\begin{itemize}
+\item Data Validation: Extensive validation rules were applied to prevent SQL
+injections.
+
+\item Encryption: Encryption and specifically hashing techniques were used to
+secure sensitive data like passwords.
+\end{itemize}
+
+\subsection{Integration of Gulp}
+\label{sec:org97131d2}
+Gulp was integrated into the workflow, providing automation for repetitive tasks
+such as minification, compilation, unit testing, and linting. This not only
+streamlined the development process but also ensured consistent code quality;
+now we are able to ensure the build system stays the same across the local and
+remote environments and ensure all changes work immediately after they are
+pushed. Overall this helps debugging and reduces time to solve issues in our
+experience.
+
+\subsection{Test-Driven Development (TDD)}
+\label{sec:org560ad7e}
+Through TDD, a detailed suite of tests was developed using Jest and
+Supertest:
+
+\begin{itemize}
+\item Unit Tests: For individual functions and methods.
+
+\item Integration Tests: To test interactions between different parts of the
+application.
+
+\item End-to-End Tests: To simulate real user scenarios and test the application
+as a whole.
+\end{itemize}
+
+The continuous testing cycle facilitated early detection of issues and robust
+code quality. We specifically use two suites to test either the front-end(jest)
+or the back-end(supertest).
+
+\subsection{Changes and Adjustments}
+\label{sec:orgfb7ce11}
+
+The initial phase of development was accompanied by a few unforeseen challenges
+and insights that required changes:
+
+\begin{itemize}
+\item Design Alterations: The initial ER schema underwent several
+iterationschanges to match the requirements while maintaining it's
+simplicity.
+
+\item Technology Adjustments: Decisions regarding the tools and libraries were
+refined based on compatibility and performance considerations; We did not
+originally know we would choose jest, supertest or gulp.
+\end{itemize}
+
+
+\subsection{Challenges and Overcoming Them}
+\label{sec:orgc7fe510}
+
+Phase-1 was not without its hurdles:
+
+\begin{itemize}
+\item Integration Challenges with Gulp: The integration required a deep
+understanding of the tool and its plugins. This was overcome through
+extensive documentation review and experimentation.
+
+\item Security Concerns: Ensuring a secure design required an attentive
+approach, this was achieved through following best practices like password
+hashing and then using the appropriate libraries to deal with these
+nuances.
+\end{itemize}
+
+
+\subsection{Lessons Learned}
+\label{sec:org483978b}
+Key takeaways from Phase-1 include:
+
+\begin{itemize}
+\item The Importance of Planning: Comprehensive planning played a pivotal role
+in keeping the project on track.
+
+\item History tracking: code change tracking tools like GitHub fostered a
+cohesive development environment to review and track the project and it's
+changes over time.
+
+\item Emphasis on Quality: A consistent focus on code quality, security, and
+usability ensured a productset of deliverables aligned with high standards.
+\end{itemize}
+
+
+\subsection{Conclusion}
+\label{sec:orgb749078}
+
+Phase-1 of the project has set the stage for a well-architected, secure, and
+user-centric application. The team's commitment to best practices, innovation,
+and continuous improvement has not only led to the successful completion of this
+phase but also paved the way for future success. The lessons gleaned will
+continue to guide the development as we move forward, with an eye on delivering
+a product that stands out in terms of quality, functionality, and design.
+\end{document}
