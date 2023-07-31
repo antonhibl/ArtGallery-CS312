@@ -12,3 +12,6 @@ gulp.task('minify-js', function() {
 gulp.task('watch', function() {
   gulp.watch('src/js/*.js', gulp.series('minify-js'));
 });
+
+gulp.task('default', gulp.series('minify-js'));
+
