@@ -1,20 +1,47 @@
 {
-  "name": "artgallery-cs312",
+  "name": "Art Gallery",
   "version": "1.0.0",
-  "description": "This project is an online art gallery platform where artists can create accounts, upload their artwork, showcase their creations through individual gallery pages, and interact with each other's artworks.",
+  "description": "This project is an online art gallery platform.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:server": "jest --config jest.config.server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antonhibl/ArtGallery-CS312.git"
   },
-  "keywords": [],
+  "keywords": [
+    "art"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/antonhibl/ArtGallery-CS312/issues"
   },
-  "homepage": "https://github.com/antonhibl/ArtGallery-CS312#readme"
+  "homepage": "https://github.com/antonhibl/ArtGallery-CS312#readme",
+  "dependencies": {
+    "@babel/plugin-syntax-jsx": "^7.22.5",
+    "@fluentui/react": "^8.110.11",
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsdom": "^22.1.0",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.4.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "babel-jest": "^29.6.2",
+    "jest": "^29.6.2",
+    "jest-environment-jsdom": "^29.6.2",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom"
+  }
 }
