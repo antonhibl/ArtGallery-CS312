@@ -10,6 +10,8 @@ The Art Gallery Website is built with:
 - Frontend: React
 - Backend: Node.js
 - Database: MongoDB
+- Testing: Jest, Supertest
+- Building: Gulp
 
 ## Features
 
@@ -39,9 +41,10 @@ npm install
 ```
 
 Create a `.env` file in the root of your project folder and add your MongoDB
-connection string:
+connection string and a port to host on:
 ```
 DB_CONNECTION=<Your MongoDB connection string>
+PORT=<port to use>
 ```
 
 Start the server:
@@ -49,7 +52,8 @@ Start the server:
 npm start
 ```
 
-Your app should now be running on [localhost:3000](http://localhost:3000/).
+Your app should now be running on [localhost:3000](http://localhost:3000/).(or
+whatever port you chose)
 
 ## Project Structure
 
@@ -58,15 +62,22 @@ art-gallery-website/
 ├─ client/             # React client
 │  ├─ src/
 │  │  ├─ components/   # UI components
+│  │  │   ├─ Home.js   # Home page
+│  │  │   └─ Navbar.js # Navbar
 │  │  ├─ App.js        # App component
 │  │  └─ index.js      # React entry point
 ├─ server/             # Node.js/Express server
 │  ├─ api/             # Route definitions
+│  │  └── register.js  # User registration
 │  ├─ models/          # Database models
-│  ├─ index.js         # Server entry point
+│  │  └── User.js      # User schema
+│  └─ server.js        # Server entry point
 ├─ .env                # Environment variables
 ├─ package.json        # Dependencies and scripts
 ├─ README.md           # This file
+├─ gulpfile.js         # gulp tasks file
+├─ jest.config.server.js # jest server tests config file
+├─ LICENSE             # the license
 └─ .gitignore          # Files and directories to be ignored by git
 ```
 
