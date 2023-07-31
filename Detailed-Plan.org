@@ -144,4 +144,5 @@ In conclusion, this detailed plan and task breakdown ensure a systematic
 approach to the project, efficient workload distribution, and effective
 collaboration between team members. By adhering to this plan along with other
 tools like our ER schema guidelines, we aim to deliver a high-quality, fully
+
 functional Art Gallery Website within the allocated timeframe.

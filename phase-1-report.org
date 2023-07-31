@@ -115,8 +115,26 @@ Key takeaways from Phase-1 include:
       changes over time.
       
     - Emphasis on Quality: A consistent focus on code quality, security, and
-      usability ensured a productset of deliverables aligned with high standards.
-      
+      usability ensured a productset of deliverables aligned with high
+      standards.
+
+
+** Screenshots
+
+#+caption: User Registration Logic
+[[file:./media/1.png]]
+
+#+caption: User Schema(Code)
+[[file:./media/2.png]]
+
+#+caption: User Schema(ER Template)
+[[file:./media/3.png]]
+
+#+caption: Navigation Logic
+[[file:./media/4.png]]
+
+#+caption: Tests Example
+[[file:./media/5.png]]
 
 ** Conclusion
 
