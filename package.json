@@ -2,10 +2,11 @@
   "name": "Art Gallery",
   "version": "1.0.0",
   "description": "This project is an online art gallery platform.",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
     "test": "jest",
-    "test:server": "jest --config jest.config.server.js"
+    "test:server": "jest --config jest.config.server.js",
+    "start": "react-scripts start"
   },
   "repository": {
     "type": "git",
@@ -27,8 +28,11 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsdom": "^22.1.0",
+    "jsonwebtoken": "^9.0.1",
     "mongodb": "^5.7.0",
-    "mongoose": "^7.4.1"
+    "mongoose": "^7.4.1",
+    "react-router-dom": "^6.14.2",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.9",
@@ -47,5 +51,17 @@
   },
   "jest": {
     "testEnvironment": "jest-environment-jsdom"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
