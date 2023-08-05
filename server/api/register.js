@@ -21,6 +21,7 @@ router.get('/register', (req, res) => {
       </label>
       <button type="submit">Register</button>
     </form>
+    <p>Already have an account? <a href="/api/login">Login</a></p>
   `);
 });
 
@@ -52,7 +53,7 @@ router.post('/register', async (req, res) => {
 
   try {
     const savedUser = await user.save();
-    res.status(201).send(savedUser);
+    res.redirect('/api/login');  // Redirect to login page after successful registration
   } catch (err) {
     res.status(500).send(err.message);
   }

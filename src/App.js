@@ -1,20 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
-import Gallery from './components/Gallery';
+import GalleryPage from './components/GalleryPage'
 import ArtworkDetail from './components/ArtworkDetail';
 import UserAccount from './components/UserAccount';
 
 const App = () => (
   <Router>
     <Navbar />
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/gallery" component={Gallery} />
-      <Route path="/artwork/:id" component={ArtworkDetail} />
-      <Route path="/account" component={UserAccount} />
-    </Switch>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/gallery" element={<GalleryPage />} />
+      <Route path="/artwork/:id" element={<ArtworkDetail />} />
+      <Route path="/account" element={<UserAccount />} />
+    </Routes>
   </Router>
 );
 

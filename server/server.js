@@ -20,6 +20,14 @@ app.use('/api', registerRouter);
 app.use('/api', loginRouter);
 app.use('/api', galleryRouter);
 
+app.use((req, res, next) => {
+  if (!req.user) {
+    res.redirect('/api/login');
+  } else {
+    next();
+  }
+});
+
 const server = app.listen(port, () => console.log(`Art Gallery Server running on http://localhost:${port}`));
 
 if (typeof afterAll === 'function') {

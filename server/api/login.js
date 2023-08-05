@@ -18,6 +18,7 @@ router.get('/login', (req, res) => {
       </label>
       <button type="submit">Login</button>
     </form>
+    <p>Don't have an account? <a href="/api/register">Register</a></p>
   `);
 });
 
@@ -44,7 +45,7 @@ router.post('/login', async (req, res) => {
 
   // Create and assign a token
   const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
-  res.header('auth-token', token).send(token);
+  res.cookie('auth-token', token).redirect('/api/gallery');  // Set auth-token cookie and redirect to gallery page  
 });
 
 module.exports = router;

@@ -1,26 +1,18 @@
-import React from 'react';
-import { Nav } from '@fluentui/react';
+// src/components/Navbar.js
 
-const links = [
-  {
-    name: 'Home',
-    url: '/',
-    key: 'key1',
-  },
-  {
-    name: 'Login',
-    url: '/login',
-    key: 'key2',
-  },
-  {
-    name: 'Register',
-    url: '/register',
-    key: 'key3',
-  },
-];
+import React from 'react';
+import { AppBar, Toolbar, Typography, Button } from '@material-ui/core';
 
 const Navbar = () => (
-  <Nav groups={[{ links }]} />
+  <AppBar position="static">
+    <Toolbar>
+      <Typography variant="h6" style={{ flexGrow: 1 }}>
+        Art Gallery
+      </Typography>
+      <Button color="inherit">Login</Button>
+      <Button color="inherit">Register</Button>
+    </Toolbar>
+  </AppBar>
 );
 
 export default Navbar;
