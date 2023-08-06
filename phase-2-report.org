@@ -1,4 +1,5 @@
 * Phase-2 Report: A Detailed Technical Progress Overview
+*Authors*: /Anton Hibl, Ethan Wilcox/
 
 ** Introduction
 
@@ -92,6 +93,32 @@ Phase-2 of the project has seen the successful expansion of functionalities,
 refinement of user experience, and enhancement of security measures. The team's
 commitment to best practices, continuous learning, and collaboration has led to
 the successful completion of this phase and set the stage for the final phase of
-the project. The lessons learned will continue to guide the development as we
+the project. The lessons learned will/would continue to guide the development as we
 move forward, with a focus on delivering a product that excels in terms of
 quality, functionality, and design. 
+
+** Screenshots
+
+#+caption: GalleryPage component
+[[file:./media/7.png]]
+
+#+caption: ArtworkCard component
+[[file:./media/8.png]]
+
+#+caption: ArtworkDetail component
+[[file:./media/9.png]]
+
+#+caption: App.js
+[[file:./media/10.png]]
+
+#+caption: server.js
+[[file:./media/11.png]]
+
+#+caption: index.js
+[[file:./media/12.png]]
+
+#+caption: register.js
+[[file:./media/13.png]]
+
+#+caption: index.html
+[[file:./media/14.png]]

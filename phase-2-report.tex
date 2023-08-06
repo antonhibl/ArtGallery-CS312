@@ -1,0 +1,206 @@
+% Created 2023-08-05 Sat 19:35
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Anton Hibl}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Anton Hibl},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Phase-2 Report: A Detailed Technical Progress Overview}
+\label{sec:org20aa5eb}
+\textbf{Authors}: \emph{Anton Hibl, Ethan Wilcox}
+
+\subsection{Introduction}
+\label{sec:org6975e6c}
+
+Phase-2 of the project has built upon the solid foundation laid in Phase-1, with
+a focus on expanding functionalities, refining user experience, and enhancing
+security measures. This stage was marked by iterative development, rigorous
+testing, and effective collaboration among the team members. 
+
+\subsection{Frontend Development}
+\label{sec:org1f3a3bd}
+
+\subsubsection{Features and Functionalities}
+\label{sec:orge39f501}
+\begin{itemize}
+\item Gallery Component Development: The Gallery component was designed and
+developed to display individual ArtworkCards, providing an immersive
+browsing experience for the users.
+\item ArtworkCard and ArtworkDetail Components Development: The representation
+of individual artworks and their detailed view was implemented, allowing
+users to explore and appreciate the artworks in depth.
+\item UserAccount Component Development: The UserAccount component was developed
+for managing user profile details and uploaded artworks, offering users a
+personalized and manageable space.
+\item Transition to Material-UI: To ensure a more consistent and robust UI, the
+components were refactored to use Material-UI instead of Fluent UI.
+\end{itemize}
+
+\subsubsection{Design Components and Wireframes}
+\label{sec:org29c7b27}
+The wireframes were updated to reflect the new components and changes in the
+user interface. The components were further refined to ensure a cohesive and
+intuitive user experience. 
+
+\subsection{Backend Development}
+\label{sec:org52f390f}
+
+\subsubsection{Features and Functionalities}
+\label{sec:org5bbbd7e}
+\begin{itemize}
+\item Enhanced User Authentication: The user authentication process was improved
+with the addition of a GET endpoint for the `/register` route, providing a
+graphical way for users to sign up.
+\item Artwork Model: An Artwork model was implemented to manage the artworks in
+the database, facilitating efficient data handling.
+\item VerifyToken Middleware: A middleware function was developed to verify
+tokens, enhancing the security of the application by ensuring only
+authenticated users can access certain routes.
+\end{itemize}
+
+\subsubsection{Secure Design Considerations}
+\label{sec:org0f08f16}
+\begin{itemize}
+\item Token Verification: The VerifyToken middleware was used to verify the
+`auth-token` in the headers of requests, ensuring secure access to certain
+endpoints.
+\item Secure Routing: Routes were implemented for all the client components,
+ensuring a secure and seamless navigation experience for the users.
+\end{itemize}
+
+\subsection{Integration of Client and Server}
+\label{sec:org8b15fa1}
+The backend and frontend were integrated by connecting the API with the frontend
+components. The user flow was streamlined, providing a smooth and intuitive
+experience from registration to browsing the gallery. 
+
+\subsection{Test-Driven Development (TDD)}
+\label{sec:org3ee41c1}
+The testing suite was expanded to cover the new functionalities:
+\begin{itemize}
+\item Unit Tests: Additional unit tests were written for the new functions and
+methods.
+\item Integration Tests: New integration tests were developed to test the
+interactions between the new components and the backend.
+\item End-to-End Tests: The end-to-end tests were updated to cover the new user
+flow and functionalities.
+\end{itemize}
+
+\subsection{Changes and Adjustments}
+\label{sec:org44ec6cf}
+As the project evolved, several changes and adjustments were made:
+\begin{itemize}
+\item Transition to Material-UI: The decision to switch from Fluent UI to
+Material-UI was made to ensure a more consistent and robust user
+interface.
+\item Routing Adjustments: The routing was adjusted to reflect the new user flow
+and to ensure secure access to certain routes.
+\end{itemize}
+
+\subsection{Challenges and Overcoming Them}
+\label{sec:org078c383}
+Phase-2 presented its own set of challenges:
+\begin{itemize}
+\item UI Library Transition: The transition from Fluent UI to Material-UI
+required a thorough understanding of the new library and careful
+refactoring of the components.
+\item Secure Routing: Implementing secure routing required a nuanced approach
+and careful testing to ensure only authenticated users can access certain
+routes.
+\end{itemize}
+
+\subsection{Lessons Learned}
+\label{sec:org2f2ff78}
+Key takeaways from Phase-2 include:
+\begin{itemize}
+\item The Importance of Flexibility: The ability to adapt to changes and new
+requirements played a crucial role in the successful completion of this
+phase.
+\item Value of Security: A consistent focus on security ensured a product that
+not only delivers in terms of functionality and design but also in terms
+of user privacy and data integrity.
+\end{itemize}
+
+\subsection{Conclusion}
+\label{sec:org50cd81b}
+
+Phase-2 of the project has seen the successful expansion of functionalities,
+refinement of user experience, and enhancement of security measures. The team's
+commitment to best practices, continuous learning, and collaboration has led to
+the successful completion of this phase and set the stage for the final phase of
+the project. The lessons learned will/would continue to guide the development as we
+move forward, with a focus on delivering a product that excels in terms of
+quality, functionality, and design. 
+
+\subsection{Screenshots}
+\label{sec:org6b17f0e}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./media/7.png}
+\caption{GalleryPage component}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./media/8.png}
+\caption{ArtworkCard component}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./media/9.png}
+\caption{ArtworkDetail component}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./media/10.png}
+\caption{App.js}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./media/11.png}
+\caption{server.js}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./media/12.png}
+\caption{index.js}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./media/13.png}
+\caption{register.js}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./media/14.png}
+\caption{index.html}
+\end{figure}
+\end{document}
