@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import GalleryPage from './components/GalleryPage'
 import ArtworkDetail from './components/ArtworkDetail';
+import ArtworkCard from './components/ArtworkCard';
 import UserAccount from './components/UserAccount';
 import Login from './components/Login';
 import Register from './components/Register';

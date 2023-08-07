@@ -25,6 +25,7 @@ app.use('/api', registerRouter);
 app.use('/api', loginRouter);
 app.use('/api', galleryRouter);
 app.use('/api', userRouter);
+app.use('/uploads', express.static('uploads'));
 
 app.use((req, res, next) => {
   next();

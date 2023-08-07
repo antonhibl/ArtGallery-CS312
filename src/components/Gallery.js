@@ -3,10 +3,14 @@
 import React from 'react';
 import ArtworkCard from './ArtworkCard';
 
-const Gallery = ({ artworks, onDelete, onEdit }) => (
-  <div className="gallery">
-    {artworks.map(artwork => <ArtworkCard key={artwork.id} artwork={artwork} onDelete={onDelete} onEdit={onEdit} />)}
-  </div>
-);
+const Gallery = ({ artworks, onDelete }) => {
+  return (
+    <div>
+      {artworks.map((artwork) => (
+        <ArtworkCard key={artwork._id} artwork={artwork} onDelete={onDelete} />
+      ))}
+    </div>
+  );
+};
 
 export default Gallery;
