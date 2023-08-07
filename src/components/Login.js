@@ -1,3 +1,5 @@
+// Login.js
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -15,10 +17,9 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:3000/api/login', { email, password });
+      const res = await axios.post('http://localhost:3000/api/login', { email, password }, { withCredentials: true });
       setToken(res.data.token);
-      // Redirect to gallery page or wherever you want
-      const from = location.state?.from || '/gallery';
+      navigate(from);
     } catch (err) {
       console.error(err);
     }

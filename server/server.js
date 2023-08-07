@@ -15,7 +15,10 @@ mongoose.connect(conn_str, {
 }).then(() => console.log('MongoDB connected!'))
   .catch(err => console.log(err));
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3001', // Replace with your frontend origin
+  credentials: true,
+}));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/api', registerRouter);
