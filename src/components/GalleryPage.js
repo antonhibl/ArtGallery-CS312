@@ -9,11 +9,17 @@ const GalleryPage = () => {
   const [artworks, setArtworks] = useState([]);
 
   useEffect(() => {
-    // Fetch artworks when component mounts
-    const token = document.cookie.split('; ').find(row => row.startsWith('auth-token')).split('=')[1];
-    axios.get('/api/gallery', { headers: { 'auth-token': token } })
-      .then(res => setArtworks(res.data))
-      .catch(err => console.error(err));
+    const fetchArtworks = async () => {
+      const token = document.cookie.split('; ').find(row => row.startsWith('auth-token')).split('=')[1];
+      try {
+        const res = await axios.get('http://localhost:3000/api/gallery', { headers: { 'auth-token': token } });
+        setArtworks(res.data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchArtworks();
   }, []);
 
   const handleAddArtwork = () => {

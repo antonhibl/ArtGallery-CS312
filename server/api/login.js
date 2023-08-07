@@ -4,24 +4,6 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 
-// GET endpoint for login form
-router.get('/login', (req, res) => {
-  res.send(`
-    <form method="POST" action="/api/login">
-      <label>
-        Email:
-        <input type="email" name="email" required>
-      </label>
-      <label>
-        Password:
-        <input type="password" name="password" required>
-      </label>
-      <button type="submit">Login</button>
-    </form>
-    <p>Don't have an account? <a href="/api/register">Register</a></p>
-  `);
-});
-
 // POST endpoint for login
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;

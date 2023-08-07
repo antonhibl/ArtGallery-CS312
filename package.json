@@ -20,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/antonhibl/ArtGallery-CS312/issues"
   },
-  "homepage": "https://github.com/antonhibl/ArtGallery-CS312#readme",
   "dependencies": {
     "@babel/plugin-syntax-jsx": "^7.22.5",
     "@fluentui/react": "^8.110.11",

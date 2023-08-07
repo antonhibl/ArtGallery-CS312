@@ -7,6 +7,7 @@ import ArtworkDetail from './components/ArtworkDetail';
 import UserAccount from './components/UserAccount';
 import Login from './components/Login';
 import Register from './components/Register';
+import PrivateRoute from './components/PrivateRoute';
 
 const App = () => (
   <Router>
@@ -15,9 +16,9 @@ const App = () => (
       <Route path="/" element={<Home />} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/gallery" element={<GalleryPage />} />
-      <Route path="/artwork/:id" element={<ArtworkDetail />} />
-      <Route path="/account" element={<UserAccount />} />
+      <PrivateRoute path="/gallery" element={<GalleryPage />} />
+      <PrivateRoute path="/artwork/:id" element={<ArtworkDetail />} />
+      <PrivateRoute path="/account" element={<UserAccount />} />
     </Routes>
   </Router>
 );
