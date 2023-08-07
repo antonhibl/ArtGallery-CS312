@@ -26,11 +26,8 @@ router.post('/login', async (req, res) => {
   }
 
   // Create and assign a token
-  const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
-  res.cookie('auth-token', token, {
-    sameSite: 'None',
-    secure: true,
-  }).redirect('/api/gallery');
+  const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET)
+  res.status(200).json({ token });
 });
 
 module.exports = router;

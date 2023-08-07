@@ -3,17 +3,22 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Gallery from './Gallery';
+import { useAuth } from './AuthContext';
 import { Button } from '@material-ui/core';
 
 const GalleryPage = () => {
+  const { token } = useAuth();
   const [artworks, setArtworks] = useState([]);
 
   useEffect(() => {
-    const fetchArtworks = async () => {
-      const token = document.cookie.split('; ').find(row => row.startsWith('auth-token')).split('=')[1];
-      try {
-        const res = await axios.get('http://localhost:3000/api/gallery', { headers: { 'auth-token': token } });
-        setArtworks(res.data);
+  const fetchArtworks = async () => {
+    try {
+      const res = await axios.get('http://localhost:3000/api/gallery', { headers: { 'auth-token': token } });
+      let artworks = res.data;
+        if (!Array.isArray(artworks)) {
+          artworks = [];
+        }
+        setArtworks(artworks);
       } catch (err) {
         console.error(err);
       }
