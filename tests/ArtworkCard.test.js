@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import ArtworkCard from '../client/src/components/ArtworkCard';
+import ArtworkCard from '../src/components/ArtworkCard';
 
 test('renders artwork title and image', () => {
   const artwork = { id: 1, title: 'Artwork 1', thumbnailUrl: '/path/to/image.jpg' };
