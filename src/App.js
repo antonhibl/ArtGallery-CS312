@@ -23,7 +23,6 @@ const AppContent = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/gallery" element={<PrivateRoute><GalleryPage /></PrivateRoute>} />
         <Route path="/artwork/:id" element={<PrivateRoute><ArtworkDetail /></PrivateRoute>} />
-	<Route path="/account" element={<PrivateRoute><UserAccount /></PrivateRoute>} />
       </Routes>
     </>
   );

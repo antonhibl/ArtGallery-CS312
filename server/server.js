@@ -4,6 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const registerRouter = require('./api/register');
 const loginRouter = require('./api/login'); 
+const userRouter = require('./api/user'); 
 const galleryRouter = require('./api/gallery');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -23,13 +24,10 @@ app.use(express.json());
 app.use('/api', registerRouter);
 app.use('/api', loginRouter);
 app.use('/api', galleryRouter);
+app.use('/api', userRouter);
 
 app.use((req, res, next) => {
-  if (!req.user) {
-    res.redirect('/api/login');
-  } else {
-    next();
-  }
+  next();
 });
 
 const server = app.listen(port, () => console.log(`Art Gallery Server running on http://localhost:${port}`));

@@ -1,3 +1,5 @@
+// src/components/ArtworkCard.js
+
 import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -5,10 +7,10 @@ import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-const ArtworkCard = ({ artwork, onDelete, onEdit }) => (
+const ArtworkCard = ({ artwork, onDelete }) => (
   <Card>
     <CardContent>
-      <img src={artwork.imageUrl} alt={artwork.title} />
+      <img src={`${artwork.imageUrl}`} alt={artwork.title} /> {/* Display the artwork image */}
       <Typography variant="h5" component="h2">
         {artwork.title}
       </Typography>
@@ -17,8 +19,7 @@ const ArtworkCard = ({ artwork, onDelete, onEdit }) => (
       </Typography>
     </CardContent>
     <CardActions>
-      <Button size="small" onClick={() => onDelete(artwork.id)}>Delete</Button>
-      <Button size="small" onClick={() => onEdit(artwork.id)}>Edit</Button>
+      <Button size="small" onClick={() => onDelete(artwork._id)}>Delete</Button>
     </CardActions>
   </Card>
 );
