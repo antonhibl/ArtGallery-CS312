@@ -27,16 +27,31 @@ const GalleryPage = () => {
     fetchArtworks();
   }, []);
 
-  const handleAddArtwork = () => {
-    // TODO: Implement add artwork functionality
+  const handleAddArtwork = async (newArtwork) => {
+    try {
+      const res = await axios.post('http://localhost:3000/api/gallery', newArtwork, { headers: { 'auth-token': token } });
+      setArtworks([...artworks, res.data]);
+    } catch (err) {
+      console.error(err);
+    }
   };
 
-  const handleDeleteArtwork = id => {
-    // TODO: Implement delete artwork functionality
+  const handleDeleteArtwork = async (id) => {
+    try {
+      await axios.delete(`http://localhost:3000/api/gallery/${id}`, { headers: { 'auth-token': token } });
+      setArtworks(artworks.filter(artwork => artwork.id !== id));
+    } catch (err) {
+      console.error(err);
+    }
   };
 
-  const handleEditArtwork = id => {
-    // TODO: Implement edit artwork functionality
+  const handleEditArtwork = async (id, updatedArtwork) => {
+    try {
+      const res = await axios.put(`http://localhost:3000/api/gallery/${id}`, updatedArtwork, { headers: { 'auth-token': token } });
+      setArtworks(artworks.map(artwork => artwork.id === id ? res.data : artwork));
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (

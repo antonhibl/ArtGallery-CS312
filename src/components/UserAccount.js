@@ -1,23 +1,32 @@
+// UserAccount.js
+
 import React from 'react';
 import ArtworkCard from './ArtworkCard';
-import { Stack, Text } from '@fluentui/react';
+import { Typography, Box, Grid } from '@material-ui/core';
+import { useAuth } from './AuthContext';
 
-const UserAccount = ({ user }) => {
+const UserAccount = () => {
+  const { user } = useAuth();
+
   if (!user) {
     return null; // Or a loading spinner, or some other placeholder
   }
 
   return (
-    <Stack tokens={{ childrenGap: 20 }}>
-      <Text variant="xxLarge">{user.username}'s Account</Text>
-      <Text variant="large">Email: {user.email}</Text>
+    <Box m={2}>
+      <Typography variant="h3">{user.username}'s Account</Typography>
+      <Typography variant="h5">Email: {user.email}</Typography>
       // Add more user details here
 
-      <Text variant="xxLarge">Uploaded Artworks</Text>
-      <Stack horizontal tokens={{ childrenGap: 20 }}>
-        {user.artworks.map(artwork => <ArtworkCard key={artwork.id} artwork={artwork} />)}
-      </Stack>
-    </Stack>
+      <Typography variant="h3">Uploaded Artworks</Typography>
+      <Grid container spacing={2}>
+        {user.artworks.map(artwork => (
+          <Grid item key={artwork.id}>
+            <ArtworkCard artwork={artwork} />
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   );
 };
 

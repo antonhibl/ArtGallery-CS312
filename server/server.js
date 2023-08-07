@@ -17,7 +17,6 @@ mongoose.connect(conn_str, {
 
 app.use(cors({
   origin: 'http://localhost:3001', // Replace with your frontend origin
-  credentials: true,
 }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
