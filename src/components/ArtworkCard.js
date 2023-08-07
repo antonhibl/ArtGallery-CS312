@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 const ArtworkCard = ({ artwork, onDelete }) => (
   <Card>
     <CardContent>
-      <img src={`http://localhost:3000/${artwork.imageUrl}`} alt={artwork.title} /> {/* Display the artwork image */}
+      <img src={`http://localhost:3000/${artwork.imageUrl}`} alt={artwork.title} style={{ maxWidth: '1000px', maxHeight: '1000px' }} /> {/* Display the artwork image */}
       <Typography variant="h5" component="h2">
         {artwork.title}
       </Typography>
