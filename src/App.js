@@ -6,20 +6,23 @@ import GalleryPage from './components/GalleryPage'
 import ArtworkDetail from './components/ArtworkDetail';
 import UserAccount from './components/UserAccount';
 import Login from './components/Login';
+import { AuthProvider } from './components/AuthContext';
 import Register from './components/Register';
 import PrivateRoute from './components/PrivateRoute';
 
 const App = () => (
   <Router>
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/login" element={<Login />} />
-      <PrivateRoute path="/gallery" element={<GalleryPage />} />
-      <PrivateRoute path="/artwork/:id" element={<ArtworkDetail />} />
-      <PrivateRoute path="/account" element={<UserAccount />} />
-    </Routes>
+    <AuthProvider>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/gallery" element={<PrivateRoute><GalleryPage /></PrivateRoute>} />
+        <Route path="/artwork/:id" element={<PrivateRoute><ArtworkDetail /></PrivateRoute>} />
+        <Route path="/account" element={<PrivateRoute><UserAccount /></PrivateRoute>} />
+      </Routes>
+    </AuthProvider>
   </Router>
 );
 
