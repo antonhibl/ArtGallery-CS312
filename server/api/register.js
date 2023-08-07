@@ -3,28 +3,6 @@ const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const router = express.Router();
 
-// GET endpoint for registration form
-router.get('/register', (req, res) => {
-  res.send(`
-    <form method="POST" action="/api/register">
-      <label>
-        Username:
-        <input type="text" name="username" required>
-      </label>
-      <label>
-        Email:
-        <input type="email" name="email" required>
-      </label>
-      <label>
-        Password:
-        <input type="password" name="password" required>
-      </label>
-      <button type="submit">Register</button>
-    </form>
-    <p>Already have an account? <a href="/api/login">Login</a></p>
-  `);
-});
-
 router.post('/register', async (req, res) => {
   const { username, email, password } = req.body;
 
