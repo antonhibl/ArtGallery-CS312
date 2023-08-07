@@ -10,8 +10,14 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:3000/api/register', { username, email, password });
-      // Redirect to login page or wherever you want
+      const response = await axios.post('http://localhost:3000/api/register', { username, email, password });
+      
+      if (response.status === 200) {
+        alert('Account registered successfully!');
+      } else {
+        alert('Account registration failed. Please try again.');
+      }
+
     } catch (err) {
       console.error(err);
     }

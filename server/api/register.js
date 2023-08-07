@@ -31,7 +31,7 @@ router.post('/register', async (req, res) => {
 
   try {
     const savedUser = await user.save();
-    res.redirect('/api/login');  // Redirect to login page after successful registration
+    res.status(200).send("User succesfully registered");
   } catch (err) {
     res.status(500).send(err.message);
   }
