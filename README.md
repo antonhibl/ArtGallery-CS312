@@ -95,10 +95,6 @@ ArtGallery-CS312/
 
 ### Project Evolution
 
-Sure, here's a more detailed project evolution section:
-
-## Project Evolution
-
 The project began with a proposal to create an art gallery application using Python and the Tkinter library. The initial idea was to allow users to view, search, and sort artworks, with the artworks' data stored in a SQLite database. The proposal also mentioned the use of the Pillow library for image processing and the implementation of a user-friendly GUI.
 
 As the project moved into the detailed planning phase, the team decided to shift the technology stack to a MERN stack (MongoDB, Express, React, Node.js). The database schema was outlined, which included tables for Artists, Artworks, and Users. The plan also outlined the functionality of the application, such as the ability to add and remove artworks, search for artworks, and sort artworks based on different criteria. The plan also mentioned the use of the Model-View-Controller (MVC) design pattern.
